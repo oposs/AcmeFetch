@@ -1,83 +1,141 @@
-2022-11-14 11:49:44 +0100  (HEAD -> 0.8.1)  release 0.8.1 -- Tobias Oetiker
-2022-11-14 11:49:03 +0100  (origin/0.8.1)  fix install flow -- Tobias Oetiker
-2022-11-14 09:54:14 +0100  (origin/0.8.0, 0.8.0)  get ready for 0.8.0 -- Tobias Oetiker
-2022-11-11 18:05:13 +0000   add support for openssl 3 -- Dominik Hassler
-2020-08-15 15:41:00 +0200   chainOutput and chainFormat not supported anymore -- Dirk Deimeke
-2020-09-16 15:25:25 +0000   restore missing '# CONFFILE' tag -- Dominik Hassler
-2020-08-12 09:42:25 +0200  (origin/r/0.7.5, r/0.7.5)  fix challenge management -- Tobias Oetiker
-2020-08-03 08:47:41 +0200  (origin/v0.7.2, v0.7.2)  better logging -- Tobias Oetiker
-2020-07-28 16:35:54 +0200   fix version numbering -- Tobias Oetiker
-2020-07-28 11:27:08 +0200   * remove v1 leftovers * improve error handling -- Tobias Oetiker
-2020-07-05 11:57:35 +0000   challengeHandler is gone -- Dominik Hassler
-2020-06-10 15:23:25 +0200  (tag: v0.7.1)  support openssl 1.1 -- Tobias Oetiker
-2020-02-11 22:44:10 +0100   build should honour sysconfdir (#24) -- Dominik Hassler
-2019-07-12 13:48:49 +0200   Disclaimer added (#23) -- Samuel Amoser
-2020-06-10 15:16:26 +0200   switch to Net::ACME2 -- Tobias Oetiker
-2018-07-28 18:13:43 +0200   fix for openssl 1.1.N (#22) -- Manuel Oetiker
-2017-08-21 11:18:41 +0200   Update README.md (#20) -- Manuel Oetiker
-2017-08-22 16:29:19 +0200  (tag: v0.6.2)  explicitly added Mozilla::CA module -- Tobias Oetiker
-2017-05-22 11:21:43 +0200  (tag: v0.6.1)  0.6.1 -- Tobias Oetiker
-2017-05-22 11:21:03 +0200   do not DIE from bad certs -- Tobias Oetiker
-2017-04-06 09:50:43 +0200   if chain options are omitted write cert and chain to the file specifi… (#18) -- maettu
-2017-04-06 09:52:51 +0200   0.6.0 -- Tobias Oetiker
-2017-02-07 10:19:29 +0100   sync changes -- Tobias Oetiker
-2016-07-28 14:24:02 +0200   say filename when cert expires within 30 days -- OEP
-2017-02-07 10:17:30 +0100  (tag: v0.5.1)  updated dependencies -- Tobias Oetiker
-2017-02-07 09:15:22 +0100   copackage a new release of perl-crypt-openssl-x509 since the old one broke with gcc5 -- Tobias Oetiker
-2016-05-09 09:52:11 +0200   sync CHANGES for 0.5.0 -- Tobias Oetiker
-2016-05-09 09:37:47 +0200  (tag: v0.5.0)  * update to Protocol::ACME 0.12 * remove challenge tokens from the website after use * rename old cert files before installing new ones ... just in case anything fails -- Tobias Oetiker
-2016-04-04 15:28:07 +0200   fix readme spelling -- Tobias Oetiker
-2016-02-28 14:17:15 +0100   fix typos -- Jan Willamowius
-2016-02-28 14:18:12 +0100   fix typos -- Jan Willamowius
-2016-04-04 15:25:08 +0200   add unzip dependency -- Tobias Oetiker
-2016-02-24 16:32:08 +0100   drop the whole perl module testing stuff from configure ... just confusing -- Tobias Oetiker
-2016-02-23 17:59:03 +0100  (tag: v0.4.1)  merge changes -- Tobias Oetiker
-2016-02-13 19:15:39 +0100   - config file fix -- Dominik Hassler
-2016-02-23 17:57:33 +0100   make configure more careful with checking the environment before getting perl to build things -- Tobias Oetiker
-2016-02-13 18:25:02 +0100  (tag: v0.4.0)  * --checkonly option added * make format for certs and keys configurable * updated to Protocol::ACME 0.11 * fix missing use FindBin -- Tobias Oetiker
-2016-02-12 19:47:07 +0100   - a couple of fixes -- Dominik Hassler
-2016-01-27 11:18:46 +0100   output the key to a temp file -- Tobias Oetiker
-2016-01-26 20:40:59 +0100  (tag: v0.3.4)  fix version string -- Tobias Oetiker
-2016-01-26 20:08:59 +0100   make bla work without quotes ... -- Tobias Oetiker
-2016-01-26 20:02:21 +0100  (tag: v0.3.3)  add some documentation -- Tobias Oetiker
-2016-01-26 16:39:24 +0100  (tag: v0.3.2)  better documentation -- Tobias Oetiker
-2016-01-26 16:31:51 +0100   added progress reporting -- Tobias Oetiker
-2016-01-25 18:11:03 +0100   maybe adding an explicity Math::BigInt dependency will unbreak Travis ? -- Tobias Oetiker
-2016-01-25 17:58:40 +0100  (tag: v0.3.1)  * make 'on demand' rebuild work * add ssl dependency -- Tobias Oetiker
-2016-01-25 11:27:46 +0100  (tag: v0.3.0)  fix sample config -- Tobias Oetiker
-2016-01-25 11:25:29 +0100   * only renew certificates that are expired OR do not contain all subject alternativ names * make this work with the 0.09 api -- Tobias Oetiker
-2016-01-25 08:21:38 +0100  (tag: v0.2.2)  release 0.2.2 -- Tobias Oetiker
-2016-01-25 08:19:23 +0100   add JSON::PP as a dependency, just to be sure it gets built (#6) -- Tobias Oetiker
-2016-01-20 11:21:06 +0100  (tag: v0.2.1)  re-realease for 0.09 -- Tobias Oetiker
-2016-01-19 09:26:56 +0100   added missing quotes -- Tobias Oetiker
-2016-01-19 09:25:57 +0100   spelling is important :-) -- Tobias Oetiker
-2016-01-19 09:25:09 +0100   not env, PERL -- Tobias Oetiker
-2016-01-19 09:24:14 +0100   still trying to get travis to check all perl version -- Tobias Oetiker
-2016-01-19 09:22:49 +0100   fix perlbrew call -- Tobias Oetiker
-2016-01-19 09:21:10 +0100   try directing perlbrew -- Tobias Oetiker
-2016-01-19 09:08:04 +0100   no cpan stuff -- Tobias Oetiker
-2016-01-19 09:04:11 +0100   can we build on different perls? -- Tobias Oetiker
-2016-01-19 09:00:13 +0100   even simpler test -- Tobias Oetiker
-2016-01-19 08:57:43 +0100   switch to c infrastructure -- Tobias Oetiker
-2016-01-19 08:56:43 +0100   fix syntax regression -- Tobias Oetiker
-2016-01-19 08:54:18 +0100   complete build cycle -- Tobias Oetiker
-2016-01-19 08:50:40 +0100   go travis -- Tobias Oetiker
-2016-01-19 08:46:30 +0100   lets have some testing -- Tobias Oetiker
-2016-01-19 08:39:54 +0100   remove Protocol::ACME dependencies ... -- Tobias Oetiker
-2016-01-18 21:23:50 +0100  (tag: v0.2.0)  release 0.2.0 -- Tobias Oetiker
-2016-01-18 21:21:34 +0100   some extra cleanup -- Tobias Oetiker
-2016-01-18 10:34:00 -0800   Adding staging option -- Stephen Ludin
-2016-01-18 21:08:17 +0100   do not specify unnecesasry attributes -- Tobias Oetiker
-2016-01-18 19:06:08 +0100   better docs -- Tobias Oetiker
-2016-01-18 19:00:17 +0100  (tag: v0.1.1)  v0.1.1 -- Tobias Oetiker
-2016-01-18 18:59:36 +0100   make it work for just one site -- Tobias Oetiker
-2016-01-18 09:33:51 -0800   Adding mkdir for $(libdir) in Makefile.am -- Stephen Ludin
-2016-01-18 18:53:12 +0100   irnore README -- Tobias Oetiker
-2016-01-18 18:52:48 +0100   fix readme -- Tobias Oetiker
-2016-01-18 17:45:08 +0100  (tag: v0.1.0)  ignore archives -- Tobias Oetiker
-2016-01-18 17:44:47 +0100   missing files added -- Tobias Oetiker
-2016-01-18 17:36:46 +0100   first certificate generated -- Tobias Oetiker
-2016-01-17 18:16:04 +0100   fix syntax -- Tobias Oetiker
-2016-01-17 18:15:05 +0100   install config file via make -- Tobias Oetiker
-2016-01-17 18:00:52 +0100   initial -- Tobias Oetiker
-2016-01-15 14:11:43 +0100   first commit -- Tobias Oetiker
+# Changelog
+
+All notable changes to this project will be documented in this file.
+
+The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
+except that the first subsection is called `New` rather than `Added`. The release
+workflow matches on `### New`; renaming it silently drops the section from the
+release notes.
+
+This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
+
+## [Unreleased]
+
+### New
+- Each release ships `.deb`, `.rpm` and `.apk` packages for Debian 12 and 13, Ubuntu 22.04, 24.04 and 26.04, AlmaLinux 9 and 10, Fedora and Alpine 3.23 and 3.24, published to the package registry at gitea.oetiker.ch (owner `oposs`), and a source tarball. The package installs acmefetch with the Perl modules it needs under `/opt/acmefetch`, links `/usr/bin/acmefetch` to it, reads `/etc/acmefetch/acmefetch.cfg` and puts the example configuration under `/usr/share/doc/acmefetch/examples/`.
+- `make check` runs a test of the command line, the configuration check and `--checkonly`.
+
+### Changed
+- `./configure` without `--prefix` installs to `/opt/acmefetch` instead of `/opt/AcmeFetch-<version>`, and acmefetch then reads `/etc/acmefetch/acmefetch.cfg` when `--cfg` is not given. With `--prefix` the configuration stays in `<prefix>/etc`.
+- The build downloads cpanminus with curl without accepting an invalid certificate.
+- This file replaces `CHANGES`, which listed the git log.
+
+### Fixed
+- `acmefetch --version` printed `0.dev` when built from a git checkout; it now prints the version it was built from.
+- `make install` without `PERL5LIB` set no longer edits `bin/acmefetch` in the source tree.
+
+## 0.8.1 - 2022-11-14
+### Fixed
+- `make install` works again.
+
+## 0.8.0 - 2022-11-14
+### New
+- Builds and runs with OpenSSL 3.
+
+### Changed
+- The `chainOutput` and `chainFormat` keys are no longer supported; the chain is written after the certificate into the `certOutput` file.
+
+## 0.7.5 - 2020-08-12
+### Fixed
+- Challenges are handled correctly again.
+
+## 0.7.4 - 2020-08-03
+### Changed
+- Better logging.
+
+## 0.7.3 - 2020-07-28
+### Fixed
+- The version number is shown correctly.
+
+## 0.7.2 - 2020-07-28
+### Changed
+- Better error handling; leftovers of the ACME v1 protocol removed.
+
+## 0.7.1 - 2020-06-10
+### New
+- Supports OpenSSL 1.1.
+
+## 0.7.0 - 2020-06-10
+### Changed
+- Uses Net::ACME2 and the ACME v2 protocol.
+- The build honours `--sysconfdir`.
+- A note after each run reminds you to restart the web server.
+
+## 0.6.2 - 2017-08-22
+### Fixed
+- Mozilla::CA is installed explicitly.
+
+## 0.6.1 - 2017-05-22
+### Fixed
+- A bad certificate no longer stops acmefetch.
+
+## 0.6.0 - 2017-04-06
+### New
+- Without the chain options, certificate and chain are written to the `certOutput` file.
+- Names the file of a certificate that expires within 30 days.
+
+## 0.5.1 - 2017-02-07
+### Changed
+- Updated dependencies, including a Crypt::OpenSSL::X509 that builds with gcc 5.
+
+## 0.5.0 - 2016-05-09
+### Changed
+- Uses Protocol::ACME 0.12.
+- Challenge tokens are removed from the web site after use.
+- Old certificate files are renamed before new ones are installed.
+
+## 0.4.2 - 2016-04-04
+### Changed
+- configure checks for unzip and no longer tests for Perl modules.
+
+## 0.4.1 - 2016-02-23
+### Fixed
+- configure checks the environment before building Perl modules; configuration file fix.
+
+## 0.4.0 - 2016-02-13
+### New
+- `--checkonly` option.
+- The format of certificates and keys is configurable.
+
+### Changed
+- Uses Protocol::ACME 0.11.
+
+## 0.3.4 - 2016-01-26
+### Fixed
+- Version string.
+
+## 0.3.3 - 2016-01-26
+### Changed
+- More documentation.
+
+## 0.3.2 - 2016-01-26
+### New
+- Progress reporting.
+
+## 0.3.1 - 2016-01-25
+### Fixed
+- On-demand rebuild of dependencies; SSL dependency added.
+
+## 0.3.0 - 2016-01-25
+### Changed
+- Only certificates that expire or lack a configured name are renewed.
+
+## 0.2.2 - 2016-01-25
+### Fixed
+- JSON::PP is built as a dependency.
+
+## 0.2.1 - 2016-01-20
+### Fixed
+- Re-release for Protocol::ACME 0.09.
+
+## 0.2.0 - 2016-01-18
+### New
+- `--staging` option.
+
+## 0.1.1 - 2016-01-18
+### Fixed
+- Works with a single site.
+
+## 0.1.0 - 2016-01-18
+### New
+- First release.
