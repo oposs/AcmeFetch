@@ -1,0 +1,69 @@
+# The packages of acmefetch, built by ri-release-distro-packages from
+# make install DESTDIR into the stage. The piece fills in every dollar-brace
+# name before nfpm reads this file; write none in a comment.
+#
+# The program and the Perl modules it bundles live in /opt/acmefetch. Some
+# of those modules are XS, built against the release's perl and OpenSSL: the
+# piece detects those dependencies and adds them to the list below. The
+# configuration is /etc/acmefetch/acmefetch.cfg, which the package does not
+# own; the example configuration is installed under the documentation.
+name: acmefetch
+arch: "${ARCH}"
+platform: linux
+version: "${VERSION}"
+release: "${PKG_RELEASE}"
+mtime: "${MTIME}"
+section: web
+priority: optional
+maintainer: Tobias Oetiker <tobi@oetiker.ch>
+license: GPL-3.0-or-later
+homepage: https://github.com/oposs/AcmeFetch
+description: |
+  Fetch and renew Let's Encrypt certificates
+  acmefetch reads a list of certificates from its configuration, checks
+  whether each covers its names and stays valid for 30 more days, and
+  renews the ones that do not through the ACME http-01 challenge.
+depends: [perl, openssl, ${DEPENDS}]
+contents:
+  - src: ${STAGE}/opt/acmefetch
+    dst: /opt/acmefetch
+    type: tree
+  - src: /opt/acmefetch/bin/acmefetch
+    dst: /usr/bin/acmefetch
+    type: symlink
+  - src: ${STAGE}/opt/acmefetch/share/man/man1/acmefetch.1
+    dst: /usr/share/man/man1/acmefetch.1
+    file_info:
+      mode: 0644
+  - dst: /etc/acmefetch
+    type: dir
+    file_info:
+      mode: 0755
+  - src: ${STAGE}/etc/acmefetch/acmefetch.cfg.dist
+    dst: /usr/share/doc/acmefetch/examples/acmefetch.cfg.dist
+    file_info:
+      mode: 0644
+  - src: README.md
+    dst: /usr/share/doc/acmefetch/README.md
+    file_info:
+      mode: 0644
+  - src: CHANGES.md
+    dst: /usr/share/doc/acmefetch/CHANGES.md
+    file_info:
+      mode: 0644
+  - src: LICENSE
+    dst: /usr/share/doc/acmefetch/copyright
+    packager: deb
+    file_info:
+      mode: 0644
+  - src: LICENSE
+    dst: /usr/share/doc/acmefetch/LICENSE
+    packager: rpm
+    type: doc
+    file_info:
+      mode: 0644
+  - src: LICENSE
+    dst: /usr/share/doc/acmefetch/LICENSE
+    packager: apk
+    file_info:
+      mode: 0644
