@@ -49,5 +49,5 @@ distclean-local:
 	ls -1 | grep -v Makefile | grep -v cpanfile | xargs rm -rf
 
 install-exec-hook:
-	mkdir -p $(DESTDIR)$(libdir)
-	cp -fr lib/perl5/* $(DESTDIR)$(libdir)
+	mkdir -p $(DESTDIR)$(libdir)/perl5
+	cp -fr lib/perl5/* $(DESTDIR)$(libdir)/perl5

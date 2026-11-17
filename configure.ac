@@ -11,7 +11,7 @@ AM_MAINTAINER_MODE
 
 m4_ifdef([AM_SILENT_RULES], [AM_SILENT_RULES([yes])])
 
-AC_PREFIX_DEFAULT(/opt/$PACKAGE_NAME-$PACKAGE_VERSION)
+AC_PREFIX_DEFAULT(/opt/acmefetch)
 
 AC_ARG_VAR(PERL,   [Path to local perl binary])
 AC_PATH_PROG(PERL, perl, no)
@@ -25,7 +25,7 @@ if test -x "$WGET"; then
     URL_CAT="$WGET -O -"
 else
     if test -x "$CURL"; then
-        URL_CAT="$CURL --location --insecure"
+        URL_CAT="$CURL --fail --location"
     fi
 fi
 
@@ -74,6 +74,7 @@ AC_CHECK_HEADER([openssl/ssl.h],[],[
   AC_MSG_ERROR([to build openssl support perl needs the 'libssl-dev' (ubuntu/debian) or 'openssl-devel' (redhat) package])
 ])
 
+AC_PROG_GREP
 AC_ARG_VAR(GMAKE,   [Path to local GNU Make binary])
 AC_PATH_PROGS(GMAKE, [gnumake gmake make])
 
@@ -92,6 +93,13 @@ AC_SUBST(enable_pkgonly)
 actual_prefix=$prefix
 if test x$actual_prefix = xNONE; then
     actual_prefix=$ac_default_prefix
+fi
+
+# With the default prefix, the installation follows the package layout: the
+# program in /opt/acmefetch, its configuration in /etc/acmefetch. An explicit
+# --prefix or --sysconfdir keeps the autoconf default of PREFIX/etc.
+if test "x$prefix" = xNONE && test "x$sysconfdir" = 'x${prefix}/etc'; then
+    sysconfdir=/etc/acmefetch
 fi
 
 AC_ARG_VAR(PERL5LIB,   [Colon separated list of perl library directories])
