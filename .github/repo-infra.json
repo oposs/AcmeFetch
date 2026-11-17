@@ -13,9 +13,7 @@
     "acmefetch_*_amd64.deb",
     "acmefetch_*_arm64.deb",
     "acmefetch-*.x86_64.rpm",
-    "acmefetch-*.aarch64.rpm",
-    "acmefetch-*-alpine*-x86_64.apk",
-    "acmefetch-*-alpine*-aarch64.apk"
+    "acmefetch-*.aarch64.rpm"
   ],
   "gitea_packages": {
     "url": "https://gitea.oetiker.ch",

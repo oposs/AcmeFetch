@@ -7,7 +7,9 @@
 # named in cpanfile from CPAN. Net::SSLeay and Crypt::OpenSSL::X509 are XS
 # modules and build against the release's OpenSSL, hence the compiler and the
 # OpenSSL and zlib headers. acmefetch and its test call the openssl command.
-# The image is built without a context: it names packages and nothing else.
+# On the rpm releases curl is named by its path: AlmaLinux 9 ships
+# curl-minimal, which conflicts with curl. The image is built without a
+# context: it names packages and nothing else.
 ARG BASE=docker.io/library/debian:13
 FROM ${BASE} AS build-deps
 
@@ -21,7 +23,7 @@ RUN set -eu; \
             libcrypt-dev libssl-dev zlib1g-dev openssl; \
         rm -rf /var/lib/apt/lists/* ;; \
     *" rhel "*|*" fedora "*|*" centos "*) \
-        dnf install -y autoconf automake make perl perl-devel curl gzip tar unzip gcc \
+        dnf install -y autoconf automake make perl perl-devel /usr/bin/curl gzip tar unzip gcc \
             openssl openssl-devel zlib-devel; \
         dnf clean all ;; \
     *" alpine "*) \
